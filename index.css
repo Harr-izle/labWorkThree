@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.grid-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: yellow;
+  width: 1000px;
+  min-height: 600px;
+  margin:20px 180px;
+}
+
+.thumbnails{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  background-color: red;
+
+}
+
+.thumbnails img{
+  width: 100%;
+  height: auto;
+}
