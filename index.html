@@ -2,19 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Image Gallery</title>
 </head>
 <body>
-
-<div class="grid-container">
-  <div class="thumbnails">
-    <img src="assets/images/audi.jpg" alt="">
-    <img src="assets/images/benzlogo.jpg" alt="">
-    <img src="assets/images/bmwlogo.jpg" alt="">
-  </div>
-</div>
-    <script src="index.js"></script>
+  <h3>Cat Gallery</h3>
+  <span>Just view the spice</span>
+    <div class="thumbnail-container">
+      <!-- thumbnail images -->
+    </div>
+    <div id="overlay" class="light-box">
+        <div id="close-btn" class="close-btn">+</div>
+        <div id="previous-btn" class="previous-btn">←</div>
+        <div id="next-btn" class="next-btn">→</div>
+        <div class="overlay-item">
+            <img id="overlay-image" class="overlay-image" src="" alt="">
+            <div>
+                <h1 id="overlay-heading"></h1>
+                <p id="overlay-description"></p>
+            </div>
+        </div>
+    </div>
+<script src="index.js"></script>
 </body>
 </html>
