@@ -74,3 +74,29 @@ const images = [
     
 
 ];
+const thumbnailContainer = document.querySelector('.thumbnail-container');
+const overlayContainer = document.getElementById("overlay")
+const overlayImage = document.getElementById("overlay-image")
+const overlayHeading = document.getElementById("overlay-heading")
+const overlayDesc = document.getElementById("overlay-description")
+const closeBtn = document.getElementById("close-btn")
+const nextBtn = document.getElementById("next-btn")
+const previousBtn = document.getElementById("previous-btn")
+
+const displayImages = (data = []) => {
+    thumbnailContainer.innerHTML = '';
+
+    const newImages = data.length ? data : images;
+
+    newImages.forEach((image, index) => {
+        const imageDiv = document.createElement('div');
+        imageDiv.classList.add('thumbnail-item');
+
+        imageDiv.innerHTML = `
+            <img src="${image.link}" alt="${image.altText}" />
+            <p>${image.name}</p>
+        `;
+        thumbnailContainer.appendChild(imageDiv);
+        imageDiv.addEventListener('click', () => showOverlay(index));
+    });
+}
