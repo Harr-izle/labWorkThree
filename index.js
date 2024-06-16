@@ -100,3 +100,23 @@ const displayImages = (data = []) => {
         imageDiv.addEventListener('click', () => showOverlay(index));
     });
 }
+
+const showOverlay = (index) => {
+    const image = images[index];
+    
+    overlayImage.src = image.link
+    overlayHeading.innerHTML = image.name
+    overlayDesc.innerHTML = image.description
+    
+    overlayContainer.style.display = "flex"
+    overlayContainer.style.opacity = "100"
+
+    currentImageIndex = index
+}
+
+const closeOverlay = () => {
+    overlayContainer.style.display = "none"
+    overlayContainer.style.opacity = "0"
+
+    currentImageIndex = null
+}
